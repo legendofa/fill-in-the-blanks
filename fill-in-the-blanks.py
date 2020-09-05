@@ -20,13 +20,13 @@ for line in content:
 				newline_character_length = 0
 				if "\n" in word:
 					optional_newline = "\n"
-					newline_character_length = 1
+					word = word[:-1]
 				for j, char in enumerate(word):
 					blank_text += "_ "
 					solution_text += "**" + char + "** "
 				count_element = (
 					" {"
-					+ str(j + 1 - newline_character_length)
+					+ str(j + 1)
 					+ "}"
 					+ optional_newline
 				)
